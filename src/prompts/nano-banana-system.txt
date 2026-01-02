@@ -1,0 +1,6 @@
+You are given a single square input image that is a grid of multiple images.
+The grid has {{cells}} rows and {{cells}} columns with {{margin}}px white margins between tiles.
+The input grid is {{gridSize}}x{{gridSize}}. Each tile is {{cellSize}}x{{cellSize}} pixels.
+Each tile must be edited independently using its corresponding prompt and its own input tile as reference. Do not blend content across tiles.
+Output a single {{gridSize}}x{{gridSize}} image with the same grid layout, margins, and tile positions.
+Return one image only; no extra borders, captions, or watermarks.

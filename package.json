@@ -1,0 +1,60 @@
+{
+  "name": "nano-banana-batch",
+  "version": "0.1.0",
+  "description": "Batch grid wrapper for Replicate google/nano-banana-pro",
+  "license": "MIT",
+  "author": "Renan Liberato",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanliberato/grid-imagen.git"
+  },
+  "homepage": "https://github.com/renanliberato/grid-imagen#readme",
+  "bugs": {
+    "url": "https://github.com/renanliberato/grid-imagen/issues"
+  },
+  "keywords": [
+    "replicate",
+    "image",
+    "batch",
+    "grid",
+    "nano-banana",
+    "nano-banana-pro"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:unit": "vitest run --dir tests/unit",
+    "test:integration": "vitest run --dir tests/integration"
+  },
+  "dependencies": {
+    "replicate": "^0.29.0",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
